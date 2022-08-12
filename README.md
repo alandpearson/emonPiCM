@@ -1,5 +1,5 @@
 # emonPiCM
-emonPi Continuous Monitoring Firmware from Robert Wall with fixes to allow RF TX in byte wise fashion to support emonGLCD
+emonPi Continuous Monitoring Firmware from Robert Wall with fixes to allow RFM69 transmit with RF69 native packets in byte-wise fashion to support emonGLCD.
 
 To test, install both .py file into /opt/openenergymonitor/emonhub/src/interfacers as the originals have not had their send functions fixed after the python3 move, nor are compatible with the new API to send in emonpiCM.
 
