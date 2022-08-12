@@ -20,6 +20,7 @@ https://github.com/alandpearson/EmonGLCD/tree/datetime/firmware/SolarPV_rfm69
 More work is required to get a emonGLCD with RF12 inside to work with RF69M packets.
 
 You will need to ensure that your emonhub.conf uses EmonHubOEMInterfacer and NOT EmonHubJeenodeInterface as follows :
+```
 [[RFM2Pi]]
     Type = EmonHubOEMInterfacer
     [[[init_settings]]]
@@ -35,10 +36,11 @@ You will need to ensure that your emonhub.conf uses EmonHubOEMInterfacer and NOT
         quiet = true                            # Report incomplete RF packets (no implemented on emonPi)
         calibration = 230V                      # (UK/EU: 230V, US: 110V)
 #        interval =  20                       # Interval to transmit time to emonGLCD (seconds)
-
+```
 
 Additionally, here is the emonhub.conf definition required for emonGLCD :
 
+```
 [[20]]
     nodename = emonglcd
     firmware =V1_1
@@ -53,5 +55,5 @@ Additionally, here is the emonhub.conf definition required for emonGLCD :
      datacodes =b,b,b,b,b,b,b,h,h,H,H
      units = nodeId,type,h,min,sec,day,mon,year,W,W,kwh,kwh
      
-     
+```     
 
